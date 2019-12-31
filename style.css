@@ -19,19 +19,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    border: 1px solid black;
+    width: 100%;
+    padding: 80px 0;
 }
+
+.pricing-container, .testimonial-container, .fromblog-container, .getintouch-container, .footer-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .section-title {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 900;
     font-style: Poppins, sans-serif;
+    margin-bottom: 10px;
 }
 
 
 .section-title-description {
     width: 50%;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 ul {
@@ -41,32 +51,339 @@ ul {
 /*=====================
   PRICING SECTION
 ======================*/
+
+
 .pricing-articles-container {
     display: flex;
+    width: 100%;
 }
 
 .pricing-article {
     background-image: url('pricing/baloon.svg');
-    background-position-x: 150px;
+    background-position-x: 250px;
     background-repeat: no-repeat;
     background-size: 50%;
-    margin: 20px;
+    margin: 15px;
     border-radius: 10px;
-    border: 1px solid black;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: calc(100% / 3);
+    position: relative;
+}
+
+.pricing-article-title {
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.pricing-hr {
+    background-color: #0067f4;
+    height: 4px;
+    width: 80px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.pricing-article-description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.pricing-article-price {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.pricing-article-plan {
+    color: gray;
+    font-weight: 900;
+    font-size: large;
+}
+
+.pricing-article-list-container {
+    margin: 0 20px 20px 20px;
+}
+
+.pricing-article-list-item {
+    padding: 10px 0;
+}
+
+.fa-check-circle {
+    color: #0067f4;
+    padding-right: 10px;
+    font-weight: 100;
+    
+}
+
+.pricing-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+}
+
+.pricing-article-button {
+    background-color: #0067f4;
+    padding: 10px 30px;
+    font-weight: 900;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.bottom-shape {
+    margin-bottom: -20px;
 }
 
 /*=====================
-  TESTIMONIAL SECTION
+TESTIMONIAL SECTION
 ======================*/
-  
+.testimonial {
+    background-color: #f4f6f7;
+    position: relative;
+    padding-bottom: 150px;
+
+}
+.testimonial-slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonial-articles-container {
+    display: flex;
+    justify-content: flex-start;
+    transition: ease-out;
+    transition-duration: .7s;
+    transition-delay: .1s;
+    padding: 0 5px;
+}
+
+.testimonial-slider-article {
+    margin: 5px;
+    padding: 20px;    
+    max-width: calc(100% / 2 - 49px);
+    min-width: calc(100% / 2 - 49px);
+    bordeR: 1px solid #eee;
+    border-radius: 10px;
+    background-color: white;
+}
+.testimonial-slider-article-profile {
+    display: flex;
+    padding: 7px;
+}
+.testimonial-slider-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.testimonial-slider-article-profile-text {
+    padding: 15px;
+}
+
+.testimonial-slider-name {
+    font-weight: bolder;
+}
+
+.testimonial-slider-profession {
+    color: #eee;
+    font-size: small;
+}
+
+.testimonial-slider-comment {
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 10px;
+}
+/* slider bullets */
+
+.testimonial-slider-bullet {
+    position: absolute;
+    bottom: 50px;
+    z-index: 100;
+}
+
+.testimonial-bullet-1 {
+    left: 48.5%;
+}
+
+.testimonial-bullet-2 {
+    left: 50%;
+}
+
+.testimonial-bullet-3 {
+    left: 51.5%;
+}
+
+.testimonial-bullet-1:checked ~ .testimonial-slider-container .testimonial-articles-container {
+    transform: translateX(-50%);
+}
+
+.testimonial-bullet-2:checked ~ .testimonial-slider-container .testimonial-articles-container {
+    transform: translateX(-100%);
+}
+
+.testimonial-bullet-3:checked ~ .testimonial-slider-container .testimonial-articles-container {
+    transform: translateX(-150%);
+}
+
 /*=====================
   FROMBLOG SECTION
 ======================*/
-  
+
+.fromblog-articles-container {
+    display: flex;
+    line-height: 20px;
+}
+
+.fromblog-article {
+    display: flex;
+    width: calc(100% / 2 - 10px);
+    margin: 10px;
+}
+
+.fromblog-article-img {
+    width: 45%;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.fromblog-article-textcontainer {
+    width: 55%;
+}
+
+.fromblog-article-info {
+    margin: 5px 0;
+}
+
+.fromblog-article-date, .fromblog-article-comments {
+    color: gray;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.fa-comment-alt, .fa-calendar-alt {
+    padding-right: 5px;
+}
+
+.fromblog-article-text {
+    font-size: 14px;
+    margin: 20px 0 35px 0;
+}
+
+.fromblog-article-readmore {
+    color: #0067f4;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 /*=====================
   GETINTOUCH SECTION
 ======================*/
-  
+.getintouch {
+    background-color: #eee;
+}
+
+.getintouch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getintouch-main-container {
+    display: flex;    
+}
+
+.getintouch-text-container {
+    margin-right: 30px;
+}
+
+.getintouch-text-container, .getintouch-form-container {
+    width: 50%;
+}
+
+.getintouch-form-title {
+    font-size: x-large;
+}
+
+.getintouch-form-text {
+    padding: 10px 0;
+    color: gray;
+}
+
+.getintouch-contact-list {
+    color: gray;
+    margin: 10px 0;
+}
+
+.getintouch-contact-item {
+    padding: 3px 0; 
+}
+
+.fa-map-marker-alt, .fa-phone-alt, .fa-envelope {
+    padding-right: 8px;
+}
+
+.getintouch-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.getintouch-label {
+    padding-bottom: 10px;
+    font-size: smaller;
+    color: gray;
+    position: relative;
+}
+
+.getintouch-form-container input, .getintouch-form-container textarea {
+    padding: 5px 35px;
+    border: 2px solid rgb(172, 167, 167);
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+}
+
+.getintouch-form-container input:focus, .getintouch-form-container textarea:focus {
+    border: 2px solid #0067f4;
+}
+
+
+.getintouch-form-icon {
+    position: absolute;
+    top: 43px;
+    left: 10px;
+}
+
+.getintouch-form-button {
+    width: 140px;
+    height: 50px;
+    background-color: #0067f4;
+    border: 0;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: smaller;
+    transition: ease;
+    transition-delay: .1s;
+    transition-duration: .5s;
+    border: 2px solid #0067f4;
+}
+
+.getintouch-form-button:hover {
+    background-color: white;
+    color: #0067f4;
+}
 /*=====================
   FOOTER SECTION
 ======================*/
