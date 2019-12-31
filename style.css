@@ -10,3 +10,63 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+/*=====================
+    GENERAL STYLING
+======================*/
+
+.pricing, .testimonial, .fromblog, .getintouch, .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    border: 1px solid black;
+}
+.section-title {
+    font-size: 40px;
+    font-weight: 900;
+    font-style: Poppins, sans-serif;
+}
+
+
+.section-title-description {
+    width: 50%;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+/*=====================
+  PRICING SECTION
+======================*/
+.pricing-articles-container {
+    display: flex;
+}
+
+.pricing-article {
+    background-image: url('pricing/baloon.svg');
+    background-position-x: 150px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/*=====================
+  TESTIMONIAL SECTION
+======================*/
+  
+/*=====================
+  FROMBLOG SECTION
+======================*/
+  
+/*=====================
+  GETINTOUCH SECTION
+======================*/
+  
+/*=====================
+  FOOTER SECTION
+======================*/
